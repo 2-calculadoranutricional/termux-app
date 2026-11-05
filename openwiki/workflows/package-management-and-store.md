@@ -66,7 +66,7 @@ sequenceDiagram
 Represents an individual entry in the package store catalog:
 - **`id`** (`String`): Unique package identifier (e.g., `"git"`, `"openwiki"`, `"codegraph"`, `"engram"`, `"zsh"`, `"neovim"`).
 - **`title`** (`String`): Human-readable package title displayed in cards and dialogs.
-- **`categoryId`** (`String`): Category ID for filtering (`"system"`, `"tools"`, `"dev"`, `"google"`, `"ia"`).
+- **`categoryId`** (`String`): Category ID for filtering (`"sistema"`, `"herramientas"`, `"desarrollo"`, `"google"`, `"ia"`).
 - **`category`** (`String`): Human-readable category display badge (e.g., `"IA y CLI • Wiki & Arquitectura"`).
 - **`description`** (`String`): Detailed overview of tool capabilities.
 - **`iconResId`** (`int`): Resource ID of the package icon drawable (`R.drawable.ic_pkg_*`).
@@ -96,6 +96,9 @@ Main activity managing the catalog lifecycle and terminal bridging:
 - **Search & Chips**: Real-time search bar with clear button (`store_search_clear`) and horizontal category chips (`"Para ti"`, `"Sistema"`, `"Herramientas"`, `"Desarrollo"`, `"Google"`, `"IA & CLI"`).
 - **`executeShellCommandInTerminal()`**: Bridges package actions directly to the active terminal session.
 - **Script Cleanup**: Defensively removes any legacy `setup_zsh.sh` files from `$HOME` or cache directory to prevent conflicting multi-step script executions.
+- **Shell Customization & Aliases**: On Zsh and catalog operations, automatically configures productivity aliases in `~/.zshrc`:
+  - `alias x="exit"` and `alias X="exit"`: Instant session termination.
+  - `alias c="clear"` and `alias C="clear"`: Terminal screen clearing.
 
 ---
 
@@ -125,10 +128,25 @@ The catalog is organized into five functional categories:
 | Category ID | Display Label | Packages Included | Primary Commands |
 |---|---|---|---|
 | **`ia`** | **IA & CLI** | OpenWiki CLI, CodeGraph, Engram | `npm install -g openwiki`, `npm install -g @colbymchenry/codegraph`, `engram` setup |
-| **`system`** | **Sistema** | Termux Storage (`termux-setup-storage`), Backup/Restore, Mirrors Config (`termux-change-repo`), Termux-API | `termux-setup-storage`, `pkg install termux-api -y` |
-| **`tools`** | **Herramientas** | Zsh + Oh My Zsh, Lazygit, Yazi, Neovim, Tmux, Htop | Direct `pkg install` + theme setups |
-| **`dev`** | **Desarrollo** | Git, GitHub CLI (`gh`), Node.js, Python, Golang, Rust | Runtime installs and CLI compilers |
+| **`sistema`** | **Sistema** | Termux Storage (`termux-setup-storage`), Backup/Restore, Mirrors Config (`termux-change-repo`), Termux-API | `termux-setup-storage`, `pkg install termux-api -y` |
+| **`herramientas`** | **Herramientas** | Zsh + Oh My Zsh (con aliases `x`/`c`), Lazygit, Yazi, Neovim, Tmux, Htop | Direct `pkg install` + theme setups |
+| **`desarrollo`** | **Desarrollo** | Git, GitHub CLI (`gh`), Node.js, Python, Golang, Rust | Runtime installs and CLI compilers |
 | **`google`** | **Google** | Gemini CLI, Cloud SDK, Angular CLI, Antigravity | CLI developer tools for cloud and web |
+
+---
+
+## Core API & Method Signatures
+
+| Class | Method | Visibility & Signature | Responsibility |
+|---|---|---|---|
+| `TermuxStoreActivity` | `start` | `public static void start(@NonNull Context context)` | Static launcher helper starting the Store Activity. |
+| `TermuxStoreActivity` | `initPackageList` | `private void initPackageList()` | Builds the curated package catalog with descriptions, commands, and aliases. |
+| `TermuxStoreActivity` | `selectCategoryChip` | `private void selectCategoryChip(@Nullable String category)` | Selects category filter, updates chip UI, and re-filters adapter. |
+| `TermuxStoreActivity` | `filterPackages` | `private void filterPackages(String query, String categoryFilter)` | Computes search query and category intersection, updating adapter items. |
+| `TermuxStoreActivity` | `executeShellCommandInTerminal` | `private void executeShellCommandInTerminal(String command)` | Sends `ACTION_EXECUTE_IN_CURRENT_SESSION` to foreground terminal. |
+| `StorePackageAdapter` | `updateList` | `public void updateList(List<StorePackageItem> newList)` | Replaces active package list and refreshes RecyclerView layout. |
+| `StorePackageAdapter` | `checkIfInstalled` | `private boolean checkIfInstalled(StorePackageItem item)` | Evaluates colon-separated `binaryCheckPath` for file existence. |
+| `StorePackageAdapter` | `showPackageDetailsDialog` | `private void showPackageDetailsDialog(StorePackageItem item)` | Displays Material Dialog with setup guide, help, and copy actions. |
 
 ---
 

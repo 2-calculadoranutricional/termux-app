@@ -40,7 +40,7 @@ Use this guide to navigate across the major domains of the Termux App codebase. 
 - **[Filesystem & POSIX Dispatcher Subsystem](concepts/filesystem-and-posix-dispatcher.md)**: Low-level POSIX filesystem inspection, `NativeDispatcher` syscall bridging (`stat`/`lstat`), `FileAttributes` metadata extraction, and safe file operations.
 
 ### Workflows & Execution
-- **[Terminal Session Lifecycle](workflows/session-lifecycle.md)**: End-to-end flow of terminal session creation (`TerminalSession`), process execution via `TermuxTerminalSessionClient`, background execution, and destruction.
+- **[Terminal Session Lifecycle & Management](workflows/session-lifecycle.md)**: End-to-end flow of terminal session creation (`TerminalSession`), session drawer controller (`TermuxSessionsListViewController`), failsafe sessions, process execution, and destruction.
 - **[Command Execution Workflow](workflows/command-execution.md)**: External command execution, `RunCommandService` intent handling, broadcast receivers, and shell integration.
 - **[Termux Store & Package Management](workflows/package-management-and-store.md)**: Curated package catalog discovery, dynamic binary presence inspection, guide dialogs, and direct active session execution (`ACTION_EXECUTE_IN_CURRENT_SESSION`).
 - **[Storage Access & File Sharing](workflows/storage-access-and-file-sharing.md)**: Storage Access Framework integration (`TermuxDocumentsProvider`) exposing `$HOME`, and external share intent handling (`FileReceiverActivity`) for downloads, URLs, and scripts.
