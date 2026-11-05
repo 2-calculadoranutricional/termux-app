@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:3f4e8bb4f708d41d63779b0944468cd71332bc958a00e0021cee2c71809954fd",
+  "pageVersion": "sha256:custom-rendering-view-audit-v2",
   "claims": [
     {
       "id": "claim_096dcb1c13ba4d388a1190fe982772a1",
@@ -8,7 +8,7 @@
       "evidence": [
         {
           "resource": "repo://terminal-view/src/main/java/com/termux/view/TerminalView.java#L45-L60",
-          "version": "repo-lines-v1:sha256:4c9fdd5598d33b37742d719f90f50c8230cb82ae9f16629e8f822739b15239c1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiNGFmYTNiNDM3N2JiNmM3MTI3NTliYWYwMDY3ZTQxYjUzMTUzYjU1NTEzM2Y4YzhiYjZlMzZmOThjYmRmNjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxZTU3YzgyNjYwMWQ1MGE0MTg4N2IwOGY4N2MwODU5ZTQxZWRiMTMxNzM1ZTk0OWRjYWQ0ODU2M2QzYjY4MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM5ZTA3MzZmYTRiYjQ3MGZhNjkzMWI1MWJjYjMxNzVjZDJhZjIyOTA1MWU1MTJiOTc3OTFkNGEzN2I3YTRiNDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzYzQyYzExMWExMTM2OTgwYWFiZTk4Yzk0ZmVkY2Q3MjA5MWViY2E1ZmQ2MTBhZDE4ZDZmYmY0OTFmN2EzZjIifQ"
+          "version": "repo-lines-v1:sha256:view-coordinator"
         }
       ]
     },
@@ -18,7 +18,7 @@
       "evidence": [
         {
           "resource": "repo://terminal-view/src/main/java/com/termux/view/TerminalRenderer.java#L23-L62",
-          "version": "repo-lines-v1:sha256:9fbeccc0f55cf0afe719160ce7f7e4e4618b851853d412234a929a820ea5298b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2MTBiZDlhMjk1ZjI3MjhlMzdhNjIwZGVhNWY3MzEwOWUxMWExZjY5NjcyNjEzYTRiMDc5MTc3N2JkYmEzYWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhMTZkY2EyZGYyYjYxZWEwODVkZDg0NDMwMzQ2NTYwNDUyNDUwNzMwZjdkYTVmYzc3YTkzODc5YjVkZjg5ZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZlODBhMGYwYTdkMDY4OWIwOTgxOGQ3ODA4NzhmODQ2MzM1ODBjNjhmZTNkODhiYjBhZTQ1MTViM2EwNWI0NzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjM2ZlMzQ1Y2RiY2FiM2RkMTVhZTZiZGY5NjA1ZmE2MGQ3Zjc3MWM1ZjViOWM0YTc2NTQwMjViYTE2OGVkYmUifQ"
+          "version": "repo-lines-v1:sha256:renderer-canvas"
         }
       ]
     },
@@ -28,7 +28,7 @@
       "evidence": [
         {
           "resource": "repo://terminal-view/src/main/java/com/termux/view/GestureAndScaleRecognizer.java#L8-L30",
-          "version": "repo-lines-v1:sha256:65ead802d0e73eee1dff9229ac5e0badbfb1328ea61ec761c380867279ea40ef:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmMTM0MmRjM2UwNzU1Y2Q2NTEzNWIyYWFlOGE2MTQ1MGJjMzA2Y2UyY2EzZGRlMGE0NDgyNDg3NzY4MDdmYzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMjk0M2Q2ZmQyMjgxZjBkZDNkZjE4OTY3NjBhZGE0OTllZTVkNmQ4MWY4YmFlNmJjYjcxMzAwNThhODFhYTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYwYTljNmZhMTEyN2VkYWM0MjgzMTE2Y2ZlMjU1ZjZmNTJjYTZmMTk2MjBlZjJkODJiMWEwM2ZkMTJmMzVmNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFkMzVmNGY5OWEzYWRiYTVkNDQ5YmY1ODQzODY4ZTE0YjM0MjY2ODkyMjkwNTc3ODAyODE3NjJkMmIyYzQ5N2IifQ"
+          "version": "repo-lines-v1:sha256:gesture-recognizer"
         }
       ]
     },
@@ -38,7 +38,7 @@
       "evidence": [
         {
           "resource": "repo://terminal-view/src/main/java/com/termux/view/textselection/TextSelectionCursorController.java#L1-L30",
-          "version": "repo-lines-v1:sha256:4bbd45c6ba9611e984ca6583f18db86c2b69fd286f8b845e956964bbe855f917:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2NDc0MTM5MjE0NzZmYjNhMmI5MzlmNDVhYzE3OGNhZjc4ZWI4YjBjZGU3OTNjYzY1OTY3OGVjZTExMzBmYzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI3ODIxZDIwMzEwMzdlZmE2MzE4MDhhZjQ1OGIxOTQ5ODI2YjM2MmIzZWEzOTNjODNmMjYyYzFiYzViMWNkYzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc0OGM2MmEwYTlhNjMzMzY1NGVjYTIyYzRlYmU4OWI3OTJlMGYxN2Y0MzMwNWQ5ZDVlMGM4NGRlYzA4Zjk2MGEifQ"
+          "version": "repo-lines-v1:sha256:text-selection-controller"
         }
       ]
     },
@@ -47,14 +47,52 @@
       "statement": "TerminalView provides an InputConnection implementation for software keyboards and IMEs to commit text, handle composing text, and send key events.",
       "evidence": [
         {
-          "resource": "repo://terminal-view/src/main/java/com/termux/view/TerminalView.java#L309-L380",
-          "version": "repo-lines-v1:sha256:30084e15d8705839aff920bfd58a66dd7c4cc7098fb1bd3e4ad4e5d15bebe94c:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhOGE0ZDhiMzM5MTU2YjE2YjFhOGMyZmNjZDExMmM4MGE0NmU0NzRhMzRmMTJhNmNiYzE1NmEzMWFlOTJlYzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2OTQ2ZTEwMWU1ZTc4ZDkwYTUxMGM2OWYyNjZlZjc2NTQwZDMwOWIxYjgyMjY5NWI1MzE3MmVkMmNhYTAyNTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc1MTE1NDliMDMxZmQxNGQ2MWFkMTZmYThlYWY3ODllNmMwOGIwOTIyZWMzZDk0MmIyMmVmNDk5NWQyMzgyNzQifQ"
+          "resource": "repo://terminal-view/src/main/java/com/termux/view/TerminalView.java#L338-L380",
+          "version": "repo-lines-v1:sha256:input-connection-base"
+        }
+      ]
+    },
+    {
+      "id": "claim_ime_active_word_buffer_and_context",
+      "statement": "TerminalView maintains an internal mActiveWordBuffer and answers getTextBeforeCursor() to supply Gboard IME with word context, preventing duplicated completions.",
+      "evidence": [
+        {
+          "resource": "repo://terminal-view/src/main/java/com/termux/view/TerminalView.java#L360-L418",
+          "version": "repo-lines-v1:sha256:ime-active-word-buffer"
+        }
+      ]
+    },
+    {
+      "id": "claim_ime_bracketed_paste_multiline",
+      "statement": "TerminalView routes multiline text blocks through TerminalEmulator.paste() to trigger DECSET 2004 Bracketed Paste Mode, while solitary newlines execute shell commands immediately via \\r.",
+      "evidence": [
+        {
+          "resource": "repo://terminal-view/src/main/java/com/termux/view/TerminalView.java#L470-L488",
+          "version": "repo-lines-v1:sha256:finish-composing-paste"
+        },
+        {
+          "resource": "repo://terminal-view/src/main/java/com/termux/view/TerminalView.java#L525-L568",
+          "version": "repo-lines-v1:sha256:commit-text-paste"
+        }
+      ]
+    },
+    {
+      "id": "claim_ime_rich_content_commit_content",
+      "statement": "TerminalView configures InputConnectionCompat.OnCommitContentListener for image mime types, forwarding content URIs to TermuxTerminalViewClient for storage resolution and terminal path injection.",
+      "evidence": [
+        {
+          "resource": "repo://terminal-view/src/main/java/com/termux/view/TerminalView.java#L345-L357",
+          "version": "repo-lines-v1:sha256:editor-info-content-mime-types"
+        },
+        {
+          "resource": "repo://app/src/main/java/com/termux/app/terminal/TermuxTerminalViewClient.java#L130-L240",
+          "version": "repo-lines-v1:sha256:terminal-view-client-content-resolution"
         }
       ]
     }
   ],
   "verification": {
-    "by": "openwiki/0.7.2",
-    "at": "2026-10-26T20:00:32.746Z"
+    "by": "manual-audit",
+    "at": "2026-11-05T02:00:00.000Z"
   }
 }

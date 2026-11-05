@@ -1,37 +1,51 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:custom-store-audit",
+  "pageVersion": "sha256:custom-store-audit-v2",
   "claims": [
     {
       "id": "claim_store_catalog_and_filtering",
-      "statement": "TermuxStoreActivity provides a categorized package catalog with real-time text search and category chip filtering.",
+      "statement": "TermuxStoreActivity provides a categorized package catalog with real-time text search and category chip filtering using categories 'sistema', 'herramientas', 'desarrollo', 'google', and 'ia'.",
       "evidence": [
         {
-          "resource": "repo://app/src/main/java/com/termux/app/store/TermuxStoreActivity.java#L30-L95",
+          "resource": "repo://app/src/main/java/com/termux/app/store/TermuxStoreActivity.java#L81-L158",
           "version": "repo-lines-v1:sha256:store-activity-init"
+        },
+        {
+          "resource": "repo://app/src/main/java/com/termux/app/store/TermuxStoreActivity.java#L160-L245",
+          "version": "repo-lines-v1:sha256:store-chips-and-filtering"
         }
       ]
     },
     {
       "id": "claim_store_binary_check_adapter",
-      "statement": "StorePackageAdapter verifies binary presence across candidate paths in binaryCheckPath to toggle between Install, Update, Uninstall, and Execute states.",
+      "statement": "StorePackageAdapter.onBindViewHolder verifies binary presence across candidate paths in binaryCheckPath to toggle between Install, Update, Uninstall, and Execute states.",
       "evidence": [
         {
-          "resource": "repo://app/src/main/java/com/termux/app/store/StorePackageAdapter.java#L45-L120",
+          "resource": "repo://app/src/main/java/com/termux/app/store/StorePackageAdapter.java#L52-L113",
           "version": "repo-lines-v1:sha256:store-adapter-binary"
         }
       ]
     },
     {
-      "id": "claim_store_direct_session_execution",
-      "statement": "TermuxStoreActivity executes package actions by sending ACTION_EXECUTE_IN_CURRENT_SESSION intents to TermuxActivity to run commands directly in the active terminal session.",
+      "id": "claim_store_zsh_aliases_configuration",
+      "statement": "TermuxStoreActivity configures productivity aliases (x='exit', X='exit', c='clear', C='clear') in ~/.zshrc during initial Zsh installation and catalog updates.",
       "evidence": [
         {
-          "resource": "repo://app/src/main/java/com/termux/app/store/TermuxStoreActivity.java#L130-L175",
+          "resource": "repo://app/src/main/java/com/termux/app/store/TermuxStoreActivity.java#L280-L330",
+          "version": "repo-lines-v1:sha256:store-zsh-aliases"
+        }
+      ]
+    },
+    {
+      "id": "claim_store_direct_session_execution",
+      "statement": "TermuxStoreActivity executes package actions by sending ACTION_EXECUTE_IN_CURRENT_SESSION intents to TermuxActivity to run commands directly in the active terminal session without temporary shell scripts.",
+      "evidence": [
+        {
+          "resource": "repo://app/src/main/java/com/termux/app/store/TermuxStoreActivity.java#L1110-L1155",
           "version": "repo-lines-v1:sha256:store-execute-action"
         },
         {
-          "resource": "repo://app/src/main/java/com/termux/app/TermuxActivity.java#L180-L215",
+          "resource": "repo://app/src/main/java/com/termux/app/TermuxActivity.java#L180-L225",
           "version": "repo-lines-v1:sha256:termux-activity-execute-intent"
         }
       ]
@@ -39,6 +53,6 @@
   ],
   "verification": {
     "by": "manual-audit",
-    "at": "2026-11-04T03:00:00.000Z"
+    "at": "2026-11-05T02:00:00.000Z"
   }
 }

@@ -23,11 +23,11 @@
       "sourceFingerprint": "sha256:crash-diagnostics"
     },
     "/openwiki/concepts/rendering-and-view.md": {
-      "pageVersion": "sha256:3f4e8bb4f708d41d63779b0944468cd71332bc958a00e0021cee2c71809954fd",
-      "completedBy": "openwiki/0.7.2",
-      "completedRunId": "19e919ba-b7ba-42cd-a102-4c6e31e63a64",
-      "gitHead": "8629e632fcb95da272221be327db653fb24befe9",
-      "sourceFingerprint": "sha256:4ecfdc919b6e450fd2dca9ce00570b05282e48eb070d0b1d567c7e52f43e02c3"
+      "pageVersion": "sha256:custom-rendering-view-audit-v2",
+      "completedBy": "manual-audit",
+      "completedRunId": "auditor-sync-rendering-view",
+      "gitHead": "HEAD",
+      "sourceFingerprint": "sha256:rendering-view"
     },
     "/openwiki/concepts/terminal-emulation.md": {
       "pageVersion": "sha256:065c14215ddaf23fedf3c151e17068e2d1840acba022bc8f4e363d4039f533e2",
@@ -51,11 +51,11 @@
       "sourceFingerprint": "sha256:ipc-socket-server"
     },
     "/openwiki/quickstart.md": {
-      "pageVersion": "sha256:2bcc1df2a66b719e797efa649ad46853b1d37ff289b5e99998493484f5077fc6",
-      "completedBy": "openwiki/0.7.2",
-      "completedRunId": "b856922e-8895-47e9-a848-f474c61554be",
-      "gitHead": "3292c49e0b53c4de968abda128ce7fb0f350445a",
-      "sourceFingerprint": "sha256:7997fc94525d37ab73312275ee0dad75b59c906ebe3fb2b9ed1e4c47a0f4cafc"
+      "pageVersion": "sha256:custom-quickstart-audit-v2",
+      "completedBy": "manual-audit",
+      "completedRunId": "auditor-sync-quickstart",
+      "gitHead": "HEAD",
+      "sourceFingerprint": "sha256:quickstart"
     },
     "/openwiki/workflows/command-execution.md": {
       "pageVersion": "sha256:669dd760222c470f7afc938b48c30fbf5c1ef10762eae641bacfc004b309c241",
@@ -65,14 +65,14 @@
       "sourceFingerprint": "sha256:4ecfdc919b6e450fd2dca9ce00570b05282e48eb070d0b1d567c7e52f43e02c3"
     },
     "/openwiki/workflows/session-lifecycle.md": {
-      "pageVersion": "sha256:b8d25839a58fee4769c95c1824d21e14abc21b3fda680e09b79a4b49e67686a0",
-      "completedBy": "openwiki/0.7.2",
-      "completedRunId": "19e919ba-b7ba-42cd-a102-4c6e31e63a64",
-      "gitHead": "8629e632fcb95da272221be327db653fb24befe9",
-      "sourceFingerprint": "sha256:4ecfdc919b6e450fd2dca9ce00570b05282e48eb070d0b1d567c7e52f43e02c3"
+      "pageVersion": "sha256:custom-session-lifecycle-audit-v2",
+      "completedBy": "manual-audit",
+      "completedRunId": "auditor-sync-session-lifecycle",
+      "gitHead": "HEAD",
+      "sourceFingerprint": "sha256:session-lifecycle"
     },
     "/openwiki/workflows/package-management-and-store.md": {
-      "pageVersion": "sha256:custom-store-audit",
+      "pageVersion": "sha256:custom-store-audit-v2",
       "completedBy": "manual-audit",
       "completedRunId": "auditor-sync-store-workflow",
       "gitHead": "HEAD",

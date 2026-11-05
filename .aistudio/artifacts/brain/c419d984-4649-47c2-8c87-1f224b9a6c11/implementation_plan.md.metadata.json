@@ -1,0 +1,6 @@
+{
+  "summary": "Plan maestro de auditoría técnica exhaustiva y sincronización matemática de OpenWiki: contrasta el código fuente real frente a la base documental, corrige discrepancias en categorías de Termux Store, aliases Zsh, Gboard IME y ciclo de vida de sesiones (Session Drawer/Controller), actualiza claims granulares en .claims/, sincroniza .page-manifest.json y .last-update.json, y valida mediante el Quality Gate (compile_applet, pruebas unitarias y codegraph sync).",
+  "updatedAt": "2026-11-05T09:59:01.636013841Z",
+  "requestFeedback": true,
+  "userFacing": true
+}
